@@ -71,7 +71,7 @@
 			// timer1
 			// 
 			this.timer1.Enabled = true;
-			this.timer1.Interval = 120;
+			this.timer1.Interval = 100;
 			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
 			// 
 			// timer2
@@ -82,7 +82,7 @@
 			// 
 			// timer3
 			// 
-			this.timer3.Interval = 2000;
+			this.timer3.Interval = 1000;
 			this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
 			// 
 			// label3

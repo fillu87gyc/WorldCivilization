@@ -38,10 +38,16 @@ namespace WindowsFormsApplication4
 			var ch = SetData.ToCharArray();
 			for (int i = 0; i < ch.Length; i++)
 			{
-				Sum += Math.Abs((ch[i]-'0'+1)*(i+1));
+				Sum += Math.Abs((ch[i] - '0' + 1) * (i + 1));
 			}
-			while (Sum > 43)Sum -= 43; 
-			return new ClassMate(Sum);
+			while (Sum > 43) Sum -= 43;
+			return new ClassMate(Filter(Sum));
+		}
+		int Filter(int data)
+		{
+			if (data == 34) return 32;
+			if (data == 19) return 20;
+			return data;
 		}
 	}
 
@@ -53,8 +59,7 @@ namespace WindowsFormsApplication4
 		public ClassMate(int num)
 		{
 			Id = num;
-			if (num != 0)
-				Name = DB.DataBase.Name(num);
+			if (num != 0) Name = DB.DataBase.Name(num);
 			else Name = "名無しさん";
 		}
 	}

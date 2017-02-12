@@ -49,19 +49,17 @@ namespace WindowsFormsApplication4
 		}
 
 		private void label1_Click(object sender, EventArgs e)
-		{
-			label1.Text = this.Height + "   " + Width;
-		}
+		{}
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			Height = 450;
-			Width = 400;
+			Width = 430;
 		}
 
 		private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
 		{
-			label1.Text = monthCalendar1.SelectionStart.ToString();
+			//label1.Text = monthCalendar1.SelectionStart.ToString();
 		}
 
 		private void textBox1_TextChanged(object sender, EventArgs e)

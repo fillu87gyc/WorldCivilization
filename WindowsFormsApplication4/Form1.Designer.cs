@@ -50,9 +50,10 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(66, 58);
+			this.label1.Font = new System.Drawing.Font("MS UI Gothic", 30F);
+			this.label1.Location = new System.Drawing.Point(20, 56);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(265, 27);
+			this.label1.Size = new System.Drawing.Size(877, 90);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "ファシリテーター決める君";
 			this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -66,16 +67,18 @@
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(546, 424);
+			this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 15F);
+			this.textBox1.Location = new System.Drawing.Point(546, 182);
+			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(258, 34);
+			this.textBox1.Size = new System.Drawing.Size(313, 354);
 			this.textBox1.TabIndex = 3;
 			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
 			// 
 			// radioButton1
 			// 
 			this.radioButton1.AutoSize = true;
-			this.radioButton1.Location = new System.Drawing.Point(206, 554);
+			this.radioButton1.Location = new System.Drawing.Point(196, 574);
 			this.radioButton1.Name = "radioButton1";
 			this.radioButton1.Size = new System.Drawing.Size(151, 31);
 			this.radioButton1.TabIndex = 4;
@@ -87,7 +90,7 @@
 			// radioButton2
 			// 
 			this.radioButton2.AutoSize = true;
-			this.radioButton2.Location = new System.Drawing.Point(583, 542);
+			this.radioButton2.Location = new System.Drawing.Point(647, 574);
 			this.radioButton2.Name = "radioButton2";
 			this.radioButton2.Size = new System.Drawing.Size(124, 31);
 			this.radioButton2.TabIndex = 5;
@@ -100,7 +103,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(909, 866);
+			this.ClientSize = new System.Drawing.Size(929, 898);
 			this.Controls.Add(this.radioButton2);
 			this.Controls.Add(this.radioButton1);
 			this.Controls.Add(this.textBox1);
