@@ -12,28 +12,40 @@ namespace WindowsFormsApplication4
 {
 	public partial class Form1 : Form
 	{
-
+		//bool Flag = false;
 		public Form1()
 		{
 			InitializeComponent();
 		}
-
+		void exc()
+		{
+			
+		}
 		private void button1_Click(object sender, EventArgs e)
 		{
-			//throw new Exception();
 			if (radioButton1.Checked)
 			{
+				///Calendar モード
 				SelectMen = new CtrlData();
 				SelectMen.InDataByCalendar = monthCalendar1.SelectionStart.ToString();
-				
 			}
 			else
 			{
+				//手書き
+				if (textBox1.Text == "null")
+				{
+
+					var hoge11 = new Form5();
+					hoge11.Show();
+					WindowState = FormWindowState.Minimized;
+					return;
+				}
 				SelectMen = new CtrlData();
 				SelectMen.InDataByOther = textBox1.Text;
 			}
 			var hoge = new Form2(SelectMen);
-				hoge.Show();
+			hoge.Show();
+
 		}
 
 		private void label1_Click(object sender, EventArgs e)
