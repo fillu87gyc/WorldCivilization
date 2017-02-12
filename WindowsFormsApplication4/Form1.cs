@@ -20,7 +20,20 @@ namespace WindowsFormsApplication4
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			throw new Exception();
+			//throw new Exception();
+			if (radioButton1.Checked)
+			{
+				SelectMen = new CtrlData();
+				SelectMen.InDataByCalendar = monthCalendar1.SelectionStart.ToString();
+				
+			}
+			else
+			{
+				SelectMen = new CtrlData();
+				SelectMen.InDataByOther = textBox1.Text;
+			}
+			var hoge = new Form2(SelectMen);
+				hoge.Show();
 		}
 
 		private void label1_Click(object sender, EventArgs e)
@@ -51,7 +64,9 @@ namespace WindowsFormsApplication4
 
 		private void radioButton1_CheckedChanged(object sender, EventArgs e)
 		{
+
 			button1.Enabled = true;
 		}
+		CtrlData SelectMen;//= new CtrlData();
 	}
 }

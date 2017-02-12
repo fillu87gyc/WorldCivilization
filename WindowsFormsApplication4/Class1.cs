@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication4
 {
-	class CtrlData
+	public class CtrlData
 	{
+
 		string SetData;
 		public CtrlData()
 		{
-			SetData = null;
+			//SetData = null;
 		}
-		public string InData
+		public string InDataByCalendar
 		{
 			set
 			{
@@ -22,33 +23,29 @@ namespace WindowsFormsApplication4
 				SetData = hoge[1] + hoge[2];
 			}
 		}
-		public ClassMate? Out()
+		public string InDataByOther
 		{
-			var intcast = new List<int>(10);
+			set
+			{
+				//var str = value.Split(' ');
+				SetData = value;
+			}
+		}
+		public ClassMate Out()
+		{
+			//var intcast = new List<int>(10);
 			var Sum = 0;
 			var ch = SetData.ToCharArray();
 			for (int i = 0; i < ch.Length; i++)
 			{
-				try
-				{
-					Sum += ~int.Parse("" + ch[i]);
-				}
-				catch (Exception)
-				{
-					return null;
-				}
-				while (Sum > 43 && Sum < 0)
-				{
-					Sum -= 43;
-					if (Sum < 0)
-						Sum += 15;
-
-				}
-				return new ClassMate(Sum);
+				Sum += Math.Abs((ch[i]-'0'+1)*(i+1));
 			}
+			while (Sum > 43)Sum -= 43; 
+			return new ClassMate(Sum);
 		}
 	}
-	class ClassMate
+
+	public class ClassMate
 	{
 		public int Id;
 		public string Name;
@@ -56,26 +53,9 @@ namespace WindowsFormsApplication4
 		public ClassMate(int num)
 		{
 			Id = num;
-			Name = DataBase.Name(num);
+			if (num != 0)
+				Name = DB.DataBase.Name(num);
+			else Name = "名無しさん";
 		}
-	}
-	class DataBase
-	{
-		//public string Name[int index]{			get;set;}
-		public DataBase()
-		{
-
-		}
-		public string  Name(int num)
-		{
-			return "a";
-		}
-		string[] data = {
-			
-		};
-
-
 	}
 }
-
-
